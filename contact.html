@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Jackson Synapse Targeting Lab</title>
+  <meta name="description" content="Contact the Jackson Synapse Targeting Lab at UKDRI Imperial College London."/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .contact-info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+    }
+    .contact-info-card h3 {
+      color: var(--accent);
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+    .contact-row i {
+      color: var(--accent);
+      margin-top: 3px;
+      width: 16px;
+      flex-shrink: 0;
+    }
+    .contact-row a { color: var(--accent); text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+    .map-container {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 320px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .contact-form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      margin-top: 2rem;
+    }
+    .contact-form-card h2 { color: var(--accent); margin-top: 0; }
+    .contact-form-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.4rem; }
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 0.6rem 0.9rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .social-links-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .social-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card-bg);
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .social-link-btn:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Jackson <span>Synapse Targeting Lab</span></a>
+  <button id="nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="funding.html">Funders</a></li>
+    <li><a href="vacancies.html">Vacancies</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="responsibility.html">Responsibility</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Contact</h1>
+  <p>Get in touch with the Jackson Synapse Targeting Lab.</p>
+</section>
+
+<div class="wrapper wrapper-mid">
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-info-card">
+        <h3>Address</h3>
+        <div class="contact-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>
+            Jackson Synapse Targeting Lab<br/>
+            UK DRI at Imperial College London<br/>
+            Department of Brain Sciences<br/>
+            Burlington Danes Building<br/>
+            Du Cane Road<br/>
+            London W12 0NN<br/>
+            United Kingdom
+          </span>
+        </div>
+        <h3 style="margin-top:1.4rem">Email</h3>
+        <div class="contact-row">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:johanna.jackson@imperial.ac.uk">johanna.jackson@imperial.ac.uk</a>
+        </div>
+        <h3 style="margin-top:1.4rem">Find Us Online</h3>
+        <div class="social-links-row">
+          <a href="https://bsky.app/profile/jojacksonhere.bsky.social" target="_blank" rel="noopener" class="social-link-btn">
+            <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;fill:currentColor"><path d="M180 141.964C163.699 110.262 119.308 51.1817 78.0347 22.044C38.4971 -5.86931 -1.23016 7.58175 0.0336936 45.5802C1.95803 99.0867 36.1157 123.99 72.0041 129.909C50.5518 126.579 17.0025 140.873 44.4847 173.693C75.0258 210.43 99.6441 182.917 125.123 163.525C152.925 142.745 176.309 125.845 180 141.964Z"/><path d="M180 141.964C196.301 110.262 240.692 51.1817 281.965 22.044C321.503 -5.86931 361.23 7.58175 359.966 45.5802C358.042 99.0867 323.884 123.99 287.996 129.909C309.448 126.579 342.997 140.873 315.515 173.693C284.974 210.43 260.356 182.917 234.877 163.525C207.075 142.745 183.691 125.845 180 141.964Z"/><path d="M110.957 199.636C101.308 222.653 90.5921 249.276 74.1464 261.162C40.0234 285.862 6.60561 274.632 2.47649 244.229C-1.58753 214.553 22.3975 201.103 48.1217 196.018C69.0929 191.817 90.5651 192.797 110.957 199.636Z"/><path d="M249.043 199.636C258.692 222.653 269.408 249.276 285.854 261.162C319.977 285.862 353.394 274.632 357.524 244.229C361.588 214.553 337.603 201.103 311.878 196.018C290.907 191.817 269.435 192.797 249.043 199.636Z"/></svg>
+            Bluesky
+          </a>
+          <a href="https://www.linkedin.com/in/johannajackson/" target="_blank" rel="noopener" class="social-link-btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?user=9JBJIwMAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link-btn">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.059478694!2d-0.23589!3d51.51532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760f7a34c5f24b%3A0xde9a29c15b0d2697!2sBurlington%20Danes%20Building%2C%20Imperial%20College%20London!5e0!3m2!1sen!2suk!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Jackson Synapse Targeting Lab location map">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="nav-logo" style="font-size:1rem;margin-bottom:0.5rem">Jackson <span>Synapse Targeting Lab</span></p>
+    <p>UK DRI at Imperial College London &nbsp;|&nbsp; <a href="mailto:johanna.jackson@imperial.ac.uk">johanna.jackson@imperial.ac.uk</a></p>
+    <div class="footer-social">
+      <a href="https://bsky.app/profile/jojacksonhere.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:currentColor"><path d="M180 141.964C163.699 110.262 119.308 51.1817 78.0347 22.044C38.4971 -5.86931 -1.23016 7.58175 0.0336936 45.5802C1.95803 99.0867 36.1157 123.99 72.0041 129.909C50.5518 126.579 17.0025 140.873 44.4847 173.693C75.0258 210.43 99.6441 182.917 125.123 163.525C152.925 142.745 176.309 125.845 180 141.964Z"/><path d="M180 141.964C196.301 110.262 240.692 51.1817 281.965 22.044C321.503 -5.86931 361.23 7.58175 359.966 45.5802C358.042 99.0867 323.884 123.99 287.996 129.909C309.448 126.579 342.997 140.873 315.515 173.693C284.974 210.43 260.356 182.917 234.877 163.525C207.075 142.745 183.691 125.845 180 141.964Z"/><path d="M110.957 199.636C101.308 222.653 90.5921 249.276 74.1464 261.162C40.0234 285.862 6.60561 274.632 2.47649 244.229C-1.58753 214.553 22.3975 201.103 48.1217 196.018C69.0929 191.817 90.5651 192.797 110.957 199.636Z"/><path d="M249.043 199.636C258.692 222.653 269.408 249.276 285.854 261.162C319.977 285.862 353.394 274.632 357.524 244.229C361.588 214.553 337.603 201.103 311.878 196.018C290.907 191.817 269.435 192.797 249.043 199.636Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/johannajackson/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=9JBJIwMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

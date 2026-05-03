@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Data &amp; Resources — Jackson Synapse Targeting Lab</title>
+  <meta name="description" content="Open datasets, analysis code, and external resources from the Jackson Synapse Targeting Lab, UKDRI Imperial College London."/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .data-section-title {
+      font-size: 1.4rem;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin: 2.8rem 0 1.2rem;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.4rem;
+    }
+    .data-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .data-card h3 {
+      font-size: 1rem;
+      color: var(--heading);
+      margin: 0;
+    }
+    .data-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+      flex: 1;
+    }
+    .data-card .data-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .data-tag {
+      font-size: 0.72rem;
+      background: rgba(91,155,213,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(91,155,213,0.25);
+      border-radius: 20px;
+      padding: 0.15rem 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .data-card a.data-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.84rem;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 0.2rem;
+    }
+    .data-card a.data-link:hover { text-decoration: underline; }
+    .data-card .data-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+      opacity: 0.65;
+    }
+    .open-data-note {
+      background: rgba(91,155,213,0.07);
+      border: 1px solid rgba(91,155,213,0.2);
+      border-radius: 8px;
+      padding: 1rem 1.3rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Jackson <span>Synapse Targeting Lab</span></a>
+  <button id="nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="funding.html">Funders</a></li>
+    <li><a href="vacancies.html">Vacancies</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="responsibility.html">Responsibility</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Data &amp; Resources</h1>
+  <p>Open datasets, analysis pipelines, and curated external resources from the lab.</p>
+</section>
+
+<div class="wrapper wrapper-mid">
+  <div class="container">
+
+    <!-- DATASETS -->
+    <h2 class="data-section-title"><i class="fas fa-database" style="margin-right:0.5rem"></i>Datasets</h2>
+    <p style="margin-bottom:1.5rem;">Our datasets are currently stored and accessible on Synapse: <a href="https://www.synapse.org/Synapse:syn36812517" target="_blank" rel="noopener">synapse.org/Synapse:syn36812517</a>.</p>
+
+    <!-- CODE & TOOLS -->
+    <h2 class="data-section-title"><i class="fas fa-code" style="margin-right:0.5rem"></i>Code &amp; Tools</h2>
+    <div class="data-grid">
+
+      <div class="data-card">
+        <div class="data-icon"><i class="fab fa-github"></i></div>
+        <h3>Omix Analysis Pipeline</h3>
+        <p>R-based pipeline for the processing, normalisation, and differential analysis of synaptic proteomics data. Includes modules for batch correction, pathway enrichment, and integration with transcriptomic datasets.</p>
+        <div class="data-tags">
+          <span class="data-tag">R</span>
+          <span class="data-tag">Proteomics</span>
+          <span class="data-tag">Pipeline</span>
+        </div>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="data-link"><i class="fab fa-github"></i> GitHub (coming soon)</a>
+      </div>
+
+    </div>
+
+    <!-- EXTERNAL RESOURCES -->
+    <h2 class="data-section-title"><i class="fas fa-link" style="margin-right:0.5rem"></i>External Resources</h2>
+    <p style="margin-bottom:1.5rem;">We couldn't do our research without these resources.</p>
+    <div class="data-grid">
+
+      <div class="data-card">
+        <div class="data-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>SynGO</h3>
+        <p>The Synaptic Gene Ontology knowledgebase — a community-curated resource providing standardised gene ontology terms and annotations for synaptic biology. Essential for contextualising synaptic proteomics data.</p>
+        <div class="data-tags">
+          <span class="data-tag">Synapse</span>
+          <span class="data-tag">Gene ontology</span>
+          <span class="data-tag">Knowledgebase</span>
+        </div>
+        <a href="https://www.syngoportal.org/" target="_blank" rel="noopener" class="data-link"><i class="fas fa-external-link-alt"></i> syngoportal.org</a>
+      </div>
+
+      <div class="data-card">
+        <div class="data-icon"><i class="fas fa-dna"></i></div>
+        <h3>UKBEC — UK Brain Expression Consortium</h3>
+        <p>Gene expression data from 10 brain regions across over 130 neuropathologically normal individuals. A key resource for contextualising brain region-specific gene expression in our proteomics analyses.</p>
+        <div class="data-tags">
+          <span class="data-tag">Transcriptomics</span>
+          <span class="data-tag">Human brain</span>
+          <span class="data-tag">Reference</span>
+        </div>
+        <a href="https://www.braineac.org/" target="_blank" rel="noopener" class="data-link"><i class="fas fa-external-link-alt"></i> braineac.org</a>
+      </div>
+
+      <div class="data-card">
+        <div class="data-icon"><i class="fas fa-map"></i></div>
+        <h3>Allen Brain Atlas</h3>
+        <p>Comprehensive gene expression atlases of the human and mouse brain, providing spatial transcriptomic data at cellular and regional resolution. Used to map the brain-wide distribution of synaptic gene expression.</p>
+        <div class="data-tags">
+          <span class="data-tag">Spatial</span>
+          <span class="data-tag">Transcriptomics</span>
+          <span class="data-tag">Atlas</span>
+        </div>
+        <a href="https://portal.brain-map.org/" target="_blank" rel="noopener" class="data-link"><i class="fas fa-external-link-alt"></i> brain-map.org</a>
+      </div>
+
+      <div class="data-card">
+        <div class="data-icon"><i class="fas fa-cloud-download-alt"></i></div>
+        <h3>AD Knowledge Portal</h3>
+        <p>A Sage Bionetworks platform hosting multi-omic data from Alzheimer's disease research consortia, including the Accelerating Medicines Partnership in AD (AMP-AD). A major resource for cross-cohort analyses.</p>
+        <div class="data-tags">
+          <span class="data-tag">Multi-omics</span>
+          <span class="data-tag">AD</span>
+          <span class="data-tag">Open access</span>
+        </div>
+        <a href="https://adknowledgeportal.synapse.org/" target="_blank" rel="noopener" class="data-link"><i class="fas fa-external-link-alt"></i> adknowledgeportal.synapse.org</a>
+      </div>
+
+    </div>
+
+    <div class="open-data-note">
+      <i class="fas fa-info-circle" style="color:var(--accent);margin-right:0.5rem"></i>
+      We are committed to open science. Where possible, data and code associated with our publications are deposited in publicly accessible repositories. If you cannot find what you are looking for, please <a href="contact.html" style="color:var(--accent)">contact us</a> directly.
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="nav-logo" style="font-size:1rem;margin-bottom:0.5rem">Jackson <span>Synapse Targeting Lab</span></p>
+    <p>UK DRI at Imperial College London &nbsp;|&nbsp; <a href="mailto:johanna.jackson@imperial.ac.uk">johanna.jackson@imperial.ac.uk</a></p>
+    <div class="footer-social">
+      <a href="https://bsky.app/profile/jojacksonhere.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:currentColor"><path d="M180 141.964C163.699 110.262 119.308 51.1817 78.0347 22.044C38.4971 -5.86931 -1.23016 7.58175 0.0336936 45.5802C1.95803 99.0867 36.1157 123.99 72.0041 129.909C50.5518 126.579 17.0025 140.873 44.4847 173.693C75.0258 210.43 99.6441 182.917 125.123 163.525C152.925 142.745 176.309 125.845 180 141.964Z"/><path d="M180 141.964C196.301 110.262 240.692 51.1817 281.965 22.044C321.503 -5.86931 361.23 7.58175 359.966 45.5802C358.042 99.0867 323.884 123.99 287.996 129.909C309.448 126.579 342.997 140.873 315.515 173.693C284.974 210.43 260.356 182.917 234.877 163.525C207.075 142.745 183.691 125.845 180 141.964Z"/><path d="M110.957 199.636C101.308 222.653 90.5921 249.276 74.1464 261.162C40.0234 285.862 6.60561 274.632 2.47649 244.229C-1.58753 214.553 22.3975 201.103 48.1217 196.018C69.0929 191.817 90.5651 192.797 110.957 199.636Z"/><path d="M249.043 199.636C258.692 222.653 269.408 249.276 285.854 261.162C319.977 285.862 353.394 274.632 357.524 244.229C361.588 214.553 337.603 201.103 311.878 196.018C290.907 191.817 269.435 192.797 249.043 199.636Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/johannajackson/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=9JBJIwMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
