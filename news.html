@@ -66,6 +66,23 @@
     }
     .bsky-badge svg { width:14px; height:14px; fill:#0085ff; }
     .load-more-wrap { text-align:center; margin: 1rem 0 2rem; }
+    .media-link-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .media-link-card:hover { border-color: var(--accent); }
+    .media-source { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+    .media-title { font-size: 0.93rem; color: var(--text); font-weight: 500; line-height: 1.4; }
+    @media (max-width: 700px) {
+      .news-two-col { grid-template-columns: 1fr !important; }
+    }
     #load-more { display:none; }
   </style>
 </head>
@@ -90,20 +107,59 @@
 
 <section class="page-hero">
   <h1>News</h1>
-  <p>Latest posts from <a href="https://bsky.app/profile/jojacksonhere.bsky.social" target="_blank" rel="noopener" style="color:inherit;">@jojacksonhere.bsky.social</a></p>
+  <p>Latest posts and media from the Jackson Synapse Targeting Lab</p>
 </section>
 
 <div class="wrapper wrapper-mid">
   <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem; align-items:start;">
 
-    <div id="bsky-feed" class="news-grid">
-      <p style="color:var(--text-muted); font-style:italic; font-size:0.9rem;">Loading posts…</p>
+      <!-- LEFT: Media & Links -->
+      <div>
+        <h2 style="font-size:1.2rem; margin-bottom:1.2rem; color:var(--accent); letter-spacing:0.04em; text-transform:uppercase;">Media &amp; Features</h2>
+
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+
+          <a href="https://www.alzheimers.org.uk/get-support/publications-and-factsheets/dementia-together/studying-brain-connections-learn-about-dementia" target="_blank" rel="noopener" class="media-link-card">
+            <span class="media-source">Alzheimer's Society — Dementia Together</span>
+            <span class="media-title">Studying brain connections to learn about dementia</span>
+          </a>
+
+          <a href="https://www.womeninneuroscienceuk.org/post/rewire-your-career-johanna-jackson" target="_blank" rel="noopener" class="media-link-card">
+            <span class="media-source">Women in Neuroscience UK</span>
+            <span class="media-title">Rewire Your Career: Johanna Jackson</span>
+          </a>
+
+          <a href="https://www.bna.org.uk/events/credibility-across-sectors/speakers.html" target="_blank" rel="noopener" class="media-link-card">
+            <span class="media-source">British Neuroscience Association</span>
+            <span class="media-title">Credibility Across Sectors — Speaker</span>
+          </a>
+
+          <a href="https://www.imperial.ac.uk/dementia-research-institute/research-programmes/identifying-vulnerable-synaptic-components-for-synaptotherapeutic-intervention/" target="_blank" rel="noopener" class="media-link-card">
+            <span class="media-source">Imperial College London</span>
+            <span class="media-title">Identifying vulnerable synaptic components for synaptotherapeutic intervention</span>
+          </a>
+
+          <a href="https://www.ukdri.ac.uk/labs/jackson-lab" target="_blank" rel="noopener" class="media-link-card">
+            <span class="media-source">UK Dementia Research Institute</span>
+            <span class="media-title">Jackson Lab — Investigating synaptic vulnerability in Alzheimer's</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Bluesky feed -->
+      <div>
+        <h2 style="font-size:1.2rem; margin-bottom:1.2rem; color:var(--accent); letter-spacing:0.04em; text-transform:uppercase;">Latest from Bluesky</h2>
+        <div id="bsky-feed" class="news-grid">
+          <p style="color:var(--text-muted); font-style:italic; font-size:0.9rem;">Loading posts…</p>
+        </div>
+        <div class="load-more-wrap">
+          <button id="load-more" class="btn btn-outline">Load more</button>
+        </div>
+      </div>
+
     </div>
-
-    <div class="load-more-wrap">
-      <button id="load-more" class="btn btn-outline">Load more</button>
-    </div>
-
   </div>
 </div>
 
