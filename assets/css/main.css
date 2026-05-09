@@ -382,6 +382,36 @@ form textarea { resize: vertical; min-height: 130px; }
 .page-hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
 
 /* ──────────────────────────────────────────
+   PAGE TOC
+────────────────────────────────────────── */
+.page-toc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  padding: 0.9rem 1.2rem;
+  margin: 0 auto 0;
+  max-width: 860px;
+  list-style: none;
+}
+.page-toc li a {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.page-toc li a:hover { color: var(--accent); border-color: var(--accent); }
+.page-toc li + li::before {
+  content: '·';
+  margin-right: 1rem;
+  color: var(--border);
+}
+
+/* ──────────────────────────────────────────
    TIMELINE
 ────────────────────────────────────────── */
 .timeline { position: relative; padding-left: 2rem; }
