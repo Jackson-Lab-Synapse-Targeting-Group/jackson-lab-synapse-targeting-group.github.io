@@ -1,0 +1,7 @@
+openai-whisper
+anthropic
+pyannote.audio
+torch
+torchaudio
+pydub
+ffmpeg-python
