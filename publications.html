@@ -18,6 +18,21 @@
     .pub-title { font-weight:600; color:var(--white); display:block; margin-bottom:0.25rem; font-size:0.97rem; }
     .pub-authors { color:var(--text-muted); font-size:0.88rem; display:block; margin-bottom:0.3rem; }
     .pub-journal { color:var(--accent); font-style:italic; font-size:0.88rem; }
+    .page-hero-img {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    .page-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .page-hero-img h1,
+    .page-hero-img p {
+      position: relative;
+    }
   </style>
 </head>
 <body>
@@ -39,7 +54,7 @@
   </ul>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero page-hero-img" style="background-image:url('assets/IMC.png');">
   <h1>Publications</h1>
   <p>Peer-reviewed research from the Jackson Synapse Targeting Lab and collaborators</p>
 </div>
