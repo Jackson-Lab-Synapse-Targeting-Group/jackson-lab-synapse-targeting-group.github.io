@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Gallery — Jackson Synapse Targeting Lab</title>
+  <meta name="description" content="Scientific imaging gallery from the Jackson Synapse Targeting Lab, UK DRI at Imperial College London."/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #000;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      filter: brightness(0.85);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.8rem 1rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      font-size: 0.85rem;
+      color: #fff;
+      letter-spacing: 0.03em;
+    }
+    .gallery-caption strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    #lightbox-caption {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    #lightbox-close:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Jackson <span>Synapse Targeting Lab</span></a>
+  <button id="nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="data.html">Data</a></li>
+    <li><a href="funding.html">Funders</a></li>
+    <li><a href="vacancies.html">Vacancies</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="responsibility.html">Responsibility</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Image Gallery</h1>
+  <p>Scientific imaging from the Jackson Synapse Targeting Lab</p>
+</div>
+
+<div class="wrapper wrapper-mid">
+  <div class="container">
+    <div class="gallery-grid">
+
+      <div class="gallery-item" onclick="openLightbox('assets/VGLUT1PSD95.png', 'VGLUT1 &amp; PSD-95', 'Synaptic puncta labelled for the presynaptic vesicle marker VGLUT1 (green) and postsynaptic density marker PSD-95 (blue), with merged channel.')">
+        <img src="assets/VGLUT1PSD95.png" alt="VGLUT1 and PSD-95 synaptic puncta"/>
+        <div class="gallery-caption">
+          <strong>VGLUT1 &amp; PSD-95</strong>
+          Presynaptic and postsynaptic markers
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/GFAP_SV2a2.png', 'GFAP &amp; SV2a', 'Astrocytic marker GFAP (blue) and synaptic vesicle glycoprotein SV2a (red) in human brain tissue.')">
+        <img src="assets/GFAP_SV2a2.png" alt="GFAP and SV2a imaging"/>
+        <div class="gallery-caption">
+          <strong>GFAP &amp; SV2a</strong>
+          Astrocytes and synaptic vesicles
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/IMC.png', 'Imaging Mass Cytometry (IMC)', 'Multiplexed IMC imaging of human brain tissue showing simultaneous detection of multiple synaptic and cellular markers.')">
+        <img src="assets/IMC.png" alt="Imaging Mass Cytometry"/>
+        <div class="gallery-caption">
+          <strong>Imaging Mass Cytometry</strong>
+          Multiplexed protein detection
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('assets/ezrin.png', 'Ezrin', 'Confocal imaging of Ezrin (magenta) and synaptic markers (cyan) in human brain tissue.')">
+        <img src="assets/ezrin.png" alt="Ezrin confocal imaging"/>
+        <div class="gallery-caption">
+          <strong>Ezrin</strong>
+          Confocal imaging of human brain tissue
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <p id="lightbox-caption"></p>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="nav-logo" style="font-size:1rem;margin-bottom:0.5rem">Jackson <span>Synapse Targeting Lab</span></p>
+    <p>UK DRI at Imperial College London &nbsp;|&nbsp; <a href="mailto:johanna.jackson@imperial.ac.uk">johanna.jackson@imperial.ac.uk</a></p>
+    <div class="footer-social">
+      <a href="https://bsky.app/profile/jojacksonhere.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:currentColor"><path d="M180 141.964C163.699 110.262 119.308 51.1817 78.0347 22.044C38.4971 -5.86931 -1.23016 7.58175 0.0336936 45.5802C1.95803 99.0867 36.1157 123.99 72.0041 129.909C50.5518 126.579 17.0025 140.873 44.4847 173.693C75.0258 210.43 99.6441 182.917 125.123 163.525C152.925 142.745 176.309 125.845 180 141.964Z"/><path d="M180 141.964C196.301 110.262 240.692 51.1817 281.965 22.044C321.503 -5.86931 361.23 7.58175 359.966 45.5802C358.042 99.0867 323.884 123.99 287.996 129.909C309.448 126.579 342.997 140.873 315.515 173.693C284.974 210.43 260.356 182.917 234.877 163.525C207.075 142.745 183.691 125.845 180 141.964Z"/><path d="M110.957 199.636C101.308 222.653 90.5921 249.276 74.1464 261.162C40.0234 285.862 6.60561 274.632 2.47649 244.229C-1.58753 214.553 22.3975 201.103 48.1217 196.018C69.0929 191.817 90.5651 192.797 110.957 199.636Z"/><path d="M249.043 199.636C258.692 222.653 269.408 249.276 285.854 261.162C319.977 285.862 353.394 274.632 357.524 244.229C361.588 214.553 337.603 201.103 311.878 196.018C290.907 191.817 269.435 192.797 249.043 199.636Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/johannajackson/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=9JBJIwMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  function openLightbox(src, title, caption) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').innerHTML = '<strong>' + title + '</strong> — ' + caption;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>
