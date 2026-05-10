@@ -81,6 +81,21 @@
       margin-top: 2rem;
       line-height: 1.6;
     }
+    .page-hero-img {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    .page-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .page-hero-img h1,
+    .page-hero-img p {
+      position: relative;
+    }
   </style>
 </head>
 <body>
@@ -102,14 +117,10 @@
   </ul>
 </nav>
 
-<section class="page-hero">
+<section class="page-hero page-hero-img" style="background-image:url('assets/VGLUT1PSD95.png');">
   <h1>Data &amp; Resources</h1>
   <p>Open datasets, analysis pipelines, and curated external resources from the lab.</p>
 </section>
-
-<div style="text-align:center; margin:0 auto; max-width:100%; overflow:hidden; line-height:0;">
-  <img src="assets/VGLUT1PSD95.png" alt="VGLUT1 and PSD95 synaptic imaging" style="width:100%; max-height:380px; object-fit:cover; display:block;">
-</div>
 
 <ul class="page-toc">
   <li><a href="#datasets">Datasets</a></li>
