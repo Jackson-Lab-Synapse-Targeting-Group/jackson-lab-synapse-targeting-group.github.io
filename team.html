@@ -29,6 +29,22 @@
     @media(max-width:768px){
       .pi-section { grid-template-columns: 1fr; }
     }
+    .page-hero-img {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .page-hero-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .page-hero-img h1,
+    .page-hero-img p {
+      position: relative;
+    }
   </style>
 </head>
 <body>
@@ -50,7 +66,7 @@
   </ul>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero page-hero-img" style="background-image:url('assets/ezrin.png');">
   <h1>Meet the Team</h1>
   <p>The people behind the science</p>
 </div>
